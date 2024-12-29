@@ -46,12 +46,12 @@ public class LoginPage
     public void enterValidPassword() throws IOException {
         Utility.explicitlyWait(passwordField,driver,5);
         passwordField.sendKeys(Utility.readDataFromPropertyFile("validPassword"));
-        logger.info("Valid mobile number entered");
+        logger.info("Valid password entered");
     }
     public void enterInValidPassword() throws IOException {
         Utility.explicitlyWait(passwordField,driver,5);
         passwordField.sendKeys(Utility.readDataFromPropertyFile("invalidPassword"));
-        logger.info("InValid mobile number entered");
+        logger.info("InValid password entered");
     }
     public void clickOnSignInButton()
     {
