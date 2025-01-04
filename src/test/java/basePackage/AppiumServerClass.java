@@ -15,11 +15,11 @@ public class AppiumServerClass
     public static void setInstance()
     {
         AppiumServiceBuilder builder=new AppiumServiceBuilder();
-        builder.withAppiumJS(new File("/Users/vaibhavrajendrahadpe/.npm-global/lib/node_modules/appium/build/lib/main.js"))
-                .usingDriverExecutable(new File("/Users/vaibhavrajendrahadpe/usr/local/bin/node"))
+        builder.withAppiumJS(new File("C:\\Users\\Archents\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
                 .usingPort(4723)
                 .withArgument(GeneralServerFlag.LOCAL_TIMEZONE)
-                .withLogFile(new File("/Users/vaibhavrajendrahadpe/PracticeProjects/cnHealth/LogFile.txt"))
+                .withLogFile(new File("D:\\cianahealthAutomation\\LogFile.txt"))
                 .withIPAddress("127.0.0.1");
         server=AppiumDriverLocalService.buildService(builder);
     }
@@ -46,21 +46,22 @@ public class AppiumServerClass
         Thread.sleep(2000);
         if(server!=null)
         {
-            getInstance().stop();
             System.out.println("Server is stopped");
+            getInstance().stop();
         }
     }
 
 //    public static void main(String[] args) throws InterruptedException {
 //        Thread.sleep(5000);
+//        //startAppium();
 //        stopAppium();
 //    }
 
-    @After
-    public void tearDown() throws InterruptedException {
-        // Stop the Appium server after each test
-        stopAppium();
-    }
+//    @After
+//    public void tearDown() throws InterruptedException {
+//        // Stop the Appium server after all test
+//        stopAppium();
+//    }
 
 
 }

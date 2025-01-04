@@ -16,8 +16,8 @@ public class Base
         AppiumServerClass.startAppium();
 
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("Pixel_7_API_34")
-                .setPlatformVersion("14.0")
+        options.setDeviceName("Pixel_7_API_33")
+                .setPlatformVersion("13.0")
                 .setUdid("emulator-5554")
                 .setAutomationName("UiAutomator2")
                 .setPlatformName("Android")

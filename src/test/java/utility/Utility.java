@@ -24,7 +24,7 @@ public class Utility extends Base
     }
     public static String readDataFromPropertyFile(String key) throws IOException {
         Properties prop = new Properties();
-        FileInputStream myfile = new FileInputStream("/Users/vaibhavrajendrahadpe/PracticeProjects/cnHealth/src/test/resources/config/config1.properties");
+        FileInputStream myfile = new FileInputStream("D:\\cianahealthAutomation\\src\\test\\resources\\config\\config1.properties");
         prop.load(myfile);
         //return prop.getProperty(key);
         String value = prop.getProperty(key);

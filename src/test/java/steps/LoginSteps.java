@@ -1,12 +1,9 @@
 package steps;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import pomClasses.LoginPage;
 import utility.Utility;
 
