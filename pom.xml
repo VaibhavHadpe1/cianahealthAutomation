@@ -100,6 +100,11 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.2</version>
         <configuration>
+          <includes>
+            <include>**/*Test.java</include>
+            <include>**/*Tests.java</include>
+            <include>**/*Runner.java</include>
+          </includes>
           <useModulePath>false</useModulePath>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
@@ -107,7 +112,7 @@
       <plugin>
         <groupId>net.masterthought</groupId>
         <artifactId>maven-cucumber-reporting</artifactId>
-        <version>2.8.0</version>
+        <version>5.7.8</version>
         <executions>
           <execution>
             <id>generate-cucumber-report</id>
@@ -116,16 +121,15 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <!-- The output directory for the generated HTML report -->
-              <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
-              <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
-              <!-- Optional configuration: If skipped tests should be treated as failures -->
-              <skippedFails>true</skippedFails>
+              <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+              <inputDirectory>${project.build.directory}</inputDirectory>
+              <jsonFiles>
+                <param>**/*.json</param>
+              </jsonFiles>
             </configuration>
           </execution>
         </executions>
       </plugin>
     </plugins>
-
   </build>
 </project>
